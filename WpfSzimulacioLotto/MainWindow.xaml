@@ -1,0 +1,71 @@
+﻿<Window x:Class="WpfSzimulacioLotto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfSzimulacioLotto"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1000"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent">
+    <Border 
+        Background="LightGreen"
+        CornerRadius="35"
+        >
+    <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="700"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock 
+                Text="Lottó"
+                FontSize="26"
+                Padding="0,15"
+                VerticalAlignment="Center"
+                TextAlignment="Center"
+                Grid.ColumnSpan="2"
+                Foreground="White"
+                MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"
+                />
+
+            <WrapPanel 
+                x:Name="BetBox"
+
+                Grid.Row="1"
+                >
+               
+            </WrapPanel>
+            <Grid 
+                Grid.Row="1" 
+                Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button Content="Sorsolás"
+                        Margin="20"/>
+                <Border Grid.Row="1"
+                        Background="Green"
+                        Margin="20"
+                        CornerRadius="10">
+                    <StackPanel>
+                        
+                    </StackPanel>
+                </Border>
+                <Button x:Name="Close" 
+                        Click="Close_Click"  
+                        Grid.Row="2"                                       Content="Bezár"
+                        Margin="20"/>
+            </Grid>
+        </Grid>
+        
+        
+    </Border>
+</Window>
